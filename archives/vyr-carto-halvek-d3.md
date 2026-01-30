@@ -12,6 +12,7 @@ footer: "VISUAL DATA: PARTIAL"
 ---
 
 ## Aperçu cartographique
+![Carte annotée — Bassin de Halvek (Δ3)]({{ "/assets/maps/halvek-d3-annotated.png" | relative_url }})
 
 > **Note système :** rendu symbolique. Échelle non fiable.  
 > **Surcouche :** annotations manuscrites détectées.
