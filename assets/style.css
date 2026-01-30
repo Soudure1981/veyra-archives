@@ -204,3 +204,5 @@ h1{
   text-transform: uppercase;
   letter-spacing: 1.3px;
 }
+a, a:visited { color: rgba(120, 255, 190, 0.95); text-decoration: none; }
+a:hover { color: rgba(160, 255, 210, 1); text-shadow: 0 0 8px rgba(120,255,190,.25); }
