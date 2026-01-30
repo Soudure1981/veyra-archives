@@ -175,6 +175,16 @@ h1{
 .doc__content ul{ margin: 10px 0 10px 18px; }
 .doc__content li{ margin: 6px 0; }
 
+/* Links */
+a, a:visited{
+  color: rgba(120, 255, 190, 0.95);
+  text-decoration: none;
+}
+a:hover{
+  color: rgba(160, 255, 210, 1);
+  text-shadow: 0 0 8px rgba(120,255,190,.25);
+}
+
 /* Footer bar */
 .footerbar{
   display:flex;
@@ -204,6 +214,8 @@ h1{
   text-transform: uppercase;
   letter-spacing: 1.3px;
 }
+
+/* Lightbox buttons */
 .lbBtn{
   border: 1px solid rgba(140,255,200,.22);
   background: rgba(10,18,14,.55);
