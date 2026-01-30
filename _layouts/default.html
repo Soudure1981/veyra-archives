@@ -65,7 +65,7 @@
     </section>
   </main>
 
-  <!-- === GLOBAL MAP LIGHTBOX (install once) === -->
+  <!-- ===== GLOBAL LIGHTBOX (maps/images) ===== -->
   <div id="lb" style="display:none; position:fixed; inset:0; z-index:9999; background:rgba(0,0,0,.88);">
     <div style="position:absolute; inset:4vh 4vw; border:1px solid rgba(140,255,200,.22); background:rgba(6,10,8,.92);">
       <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; padding:10px 12px; border-bottom:1px solid rgba(140,255,200,.18);">
@@ -89,6 +89,7 @@
   (function(){
     const lb = document.getElementById('lb');
     if(!lb) return;
+
     const img = document.getElementById('lbImg');
     const view = document.getElementById('lbView');
     const plus = document.getElementById('lbPlus');
@@ -103,7 +104,7 @@
       img.src = src;
       scale = 1; apply();
       lb.style.display = 'block';
-      setTimeout(()=>{ view.scrollTop=0; view.scrollLeft=0; }, 0);
+      setTimeout(()=>{ view.scrollTop = 0; view.scrollLeft = 0; }, 0);
     };
 
     const shut = ()=>{
@@ -111,6 +112,7 @@
       img.src = '';
     };
 
+    // Any element with data-map triggers fullscreen viewer
     document.addEventListener('click', (e)=>{
       const t = e.target.closest('[data-map]');
       if(!t) return;
@@ -118,7 +120,7 @@
       open(t.getAttribute('data-map'));
     });
 
-    plus.onclick = ()=>{ scale = Math.min(scale + 0.25, 4); apply(); };
+    plus.onclick  = ()=>{ scale = Math.min(scale + 0.25, 4); apply(); };
     minus.onclick = ()=>{ scale = Math.max(scale - 0.25, 0.5); apply(); };
     reset.onclick = ()=>{ scale = 1; apply(); view.scrollTop=0; view.scrollLeft=0; };
     close.onclick = shut;
