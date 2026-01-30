@@ -23,3 +23,7 @@ footer: "VISUAL DATA: PARTIAL"
 - ❌ **H-4 vide plus tôt que prévu**
 - ❌ **Route est trop exposée**
 - ❓ **Pourquoi tous convergent ici ?**
+
+<a href="{{ '/assets/maps/halvek-d3-annotated.png' | relative_url }}" data-map="{{ '/assets/maps/halvek-d3-annotated.png' | relative_url }}">
+  🗺️ OUVRIR CARTE — PLEIN ÉCRAN
+</a>
