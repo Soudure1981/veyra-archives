@@ -20,8 +20,10 @@ Consultation autorisée. Interprétation non garantie.
 
 ## Dossiers
 
+- [RÉPERTOIRE — ARCHIVES](/archives/)
 - **Archives**
-  - [VYR/AGRI/SECT-D3 — Archive locale agricole — Secteur Δ3](/archives/vyr-agri-sect-d3)
+  - [VYR/AGRI/SECT-D3 — Archive locale agricole — Secteur Δ3](/archives/vyr-agri-sect-d3.html)
+
 
 ---
 
