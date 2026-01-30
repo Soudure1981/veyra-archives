@@ -20,12 +20,12 @@ Consultation autorisée. Interprétation non garantie.
 
 ## Dossiers
 
-- [RÉPERTOIRE — ARCHIVES](./archives/)
+- [RÉPERTOIRE — ARCHIVES]({{ "/archives/" | relative_url }})
 - **Archives**
-  - [VYR/AGRI/SECT-D3 — Archive locale agricole — Secteur Δ3](./archives/vyr-agri-sect-d3)
-  - [VYR/CARTO/D3 — Carte annotée — Bassin de Halvek](./archives/vyr-carto-halvek-d3)
-  - [EV-LOG-09 — Dictaphone — Cohésion](./archives/ev-log-09-cohesion)
-  - [IMP/VYR/LOG-Δ12 — Synthèse logistique tronquée](./archives/imp-vyr-log-d12)
+  - [VYR/AGRI/SECT-D3 — Archive locale agricole — Secteur Δ3]({{ "/archives/vyr-agri-sect-d3" | relative_url }})
+  - [VYR/CARTO/D3 — Carte annotée — Bassin de Halvek]({{ "/archives/vyr-carto-halvek-d3" | relative_url }})
+  - [EV-LOG-09 — Dictaphone — Cohésion]({{ "/archives/ev-log-09-cohesion" | relative_url }})
+  - [IMP/VYR/LOG-Δ12 — Synthèse logistique tronquée]({{ "/archives/imp-vyr-log-d12" | relative_url }})
 
 ---
 
