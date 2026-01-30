@@ -20,10 +20,12 @@ Consultation autorisée. Interprétation non garantie.
 
 ## Dossiers
 
-- [RÉPERTOIRE — ARCHIVES](/archives/)
+- [RÉPERTOIRE — ARCHIVES](./archives/)
 - **Archives**
-  - [VYR/AGRI/SECT-D3 — Archive locale agricole — Secteur Δ3](/archives/vyr-agri-sect-d3.html)
-
+  - [VYR/AGRI/SECT-D3 — Archive locale agricole — Secteur Δ3](./archives/vyr-agri-sect-d3)
+  - [VYR/CARTO/D3 — Carte annotée — Bassin de Halvek](./archives/vyr-carto-halvek-d3)
+  - [EV-LOG-09 — Dictaphone — Cohésion](./archives/ev-log-09-cohesion)
+  - [IMP/VYR/LOG-Δ12 — Synthèse logistique tronquée](./archives/imp-vyr-log-d12)
 
 ---
 
