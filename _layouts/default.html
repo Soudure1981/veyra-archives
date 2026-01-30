@@ -6,6 +6,74 @@
   <title>{{ page.title }} — {{ site.title }}</title>
   <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
 </head>
+<div id="lb" style="display:none; position:fixed; inset:0; z-index:9999; background:rgba(0,0,0,.88);">
+  <div style="position:absolute; inset:4vh 4vw; border:1px solid rgba(140,255,200,.22); background:rgba(6,10,8,.92);">
+    <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; padding:10px 12px; border-bottom:1px solid rgba(140,255,200,.18);">
+      <div style="font-size:11px; letter-spacing:1.4px; text-transform:uppercase; color:rgba(190,255,220,.72);">VISUAL DATA — CTRL+WHEEL TO ZOOM</div>
+      <div style="display:flex; gap:8px;">
+        <button id="lbMinus" class="lbBtn">-</button>
+        <button id="lbPlus" class="lbBtn">+</button>
+        <button id="lbReset" class="lbBtn">RESET</button>
+        <button id="lbClose" class="lbBtn">CLOSE</button>
+      </div>
+    </div>
+    <div id="lbView" style="height:calc(100% - 44px); overflow:auto; cursor:grab;">
+      <img id="lbImg" src="" alt="Carte" style="display:block; transform-origin:top left; user-select:none; -webkit-user-drag:none;">
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  const lb = document.getElementById('lb');
+  if(!lb) return;
+  const img = document.getElementById('lbImg');
+  const view = document.getElementById('lbView');
+  const plus = document.getElementById('lbPlus');
+  const minus = document.getElementById('lbMinus');
+  const reset = document.getElementById('lbReset');
+  const close = document.getElementById('lbClose');
+
+  let scale = 1;
+  const apply = ()=> img.style.transform = `scale(${scale})`;
+
+  const open = (src)=>{
+    img.src = src;
+    scale = 1; apply();
+    lb.style.display = 'block';
+    setTimeout(()=>{ view.scrollTop=0; view.scrollLeft=0; }, 0);
+  };
+  const shut = ()=>{
+    lb.style.display = 'none';
+    img.src = '';
+  };
+
+  document.addEventListener('click', (e)=>{
+    const t = e.target.closest('[data-map]');
+    if(!t) return;
+    e.preventDefault();
+    open(t.getAttribute('data-map'));
+  });
+
+  plus.onclick = ()=>{ scale = Math.min(scale + 0.25, 4); apply(); };
+  minus.onclick = ()=>{ scale = Math.max(scale - 0.25, 0.5); apply(); };
+  reset.onclick = ()=>{ scale = 1; apply(); view.scrollTop=0; view.scrollLeft=0; };
+  close.onclick = shut;
+  lb.onclick = (e)=>{ if(e.target === lb) shut(); };
+
+  view.addEventListener('wheel', (e)=>{
+    if(lb.style.display !== 'block') return;
+    if(!e.ctrlKey) return;
+    e.preventDefault();
+    scale = (e.deltaY > 0) ? Math.max(scale - 0.15, 0.5) : Math.min(scale + 0.15, 4);
+    apply();
+  }, { passive:false });
+
+  document.addEventListener('keydown', (e)=>{
+    if(e.key === 'Escape' && lb.style.display === 'block') shut();
+  });
+})();
+</script>
 
 <body>
   <div class="crt"></div>
