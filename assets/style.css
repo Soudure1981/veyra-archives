@@ -204,3 +204,17 @@ h1{
   text-transform: uppercase;
   letter-spacing: 1.3px;
 }
+.lbBtn{
+  border: 1px solid rgba(140,255,200,.22);
+  background: rgba(10,18,14,.55);
+  color: rgba(190,255,220,.75);
+  padding: 6px 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-size: 11px;
+}
+.lbBtn:hover{
+  color: rgba(120,255,190,.95);
+  border-color: rgba(120,255,190,.40);
+}
