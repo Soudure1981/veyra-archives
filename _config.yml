@@ -1,0 +1,6 @@
+title: "Veyra — Terminal d’Archives"
+markdown: kramdown
+kramdown:
+  input: GFM
+exclude:
+  - README.md

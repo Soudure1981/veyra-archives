@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>{{ page.title }} — {{ site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+</head>
+
+<body>
+  <div class="crt"></div>
+
+  <header class="topbar">
+    <div class="topbar__left">
+      <span class="sigil">⟡</span>
+      <span class="topbar__label">DATA-COGITATEUR</span>
+      <span class="pill ok">ACCESS GRANTED</span>
+    </div>
+
+    <div class="topbar__right">
+      <span class="pill">{{ page.node | default: "NODE: VYR-LOCAL" }}</span>
+      <span class="pill warn">{{ page.status | default: "STATUS: FRAGMENTARY" }}</span>
+    </div>
+  </header>
+
+  <main class="frame">
+    <aside class="frame__meta">
+      <div class="meta__row">
+        <span class="k">SECURITY</span>
+        <span class="v">{{ page.security | default: "LVL-03" }}</span>
+      </div>
+      <div class="meta__row">
+        <span class="k">ARCHIVE REF</span>
+        <span class="v mono">{{ page.ref | default: "UNSPECIFIED" }}</span>
+      </div>
+      <div class="meta__row">
+        <span class="k">SYNC</span>
+        <span class="v">{{ page.sync | default: "LAST SYNC: FAIL" }}</span>
+      </div>
+      {% if page.tags %}
+      <div class="meta__row">
+        <span class="k">TAGS</span>
+        <span class="v mono">{{ page.tags | join: " · " }}</span>
+      </div>
+      {% endif %}
+    </aside>
+
+    <section class="doc">
+      <div class="doc__title">
+        <h1>{{ page.title }}</h1>
+        {% if page.subtitle %}<div class="subtitle">{{ page.subtitle }}</div>{% endif %}
+      </div>
+
+      <article class="doc__content">
+        {{ content }}
+      </article>
+
+      <footer class="footerbar">
+        <a class="btn" href="{{ '/' | relative_url }}">⟵ INDEX</a>
+        <span class="footerbar__hint mono">
+          {{ page.footer | default: "NOOS-FILE ACCESS: AUTHORIZED" }}
+        </span>
+        <a class="btn" href="{{ '/archives/' | relative_url }}">ARCHIVES ⟶</a>
+      </footer>
+    </section>
+  </main>
+</body>
+</html>
