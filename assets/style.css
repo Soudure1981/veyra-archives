@@ -230,11 +230,18 @@ a:hover{
   color: rgba(120,255,190,.95);
   border-color: rgba(120,255,190,.40);
 }
+
+/* Map thumbnail */
 .map-thumb{
   max-width: 520px;
   width: 100%;
   height: auto;
   border: 1px solid rgba(140,255,200,.18);
+  background: rgba(6,10,8,.55);
+  box-shadow: 0 18px 60px rgba(0,0,0,.55);
   cursor: zoom-in;
   display:block;
+}
+.map-thumb:hover{
+  border-color: rgba(120,255,190,.45);
 }
